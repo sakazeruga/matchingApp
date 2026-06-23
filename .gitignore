@@ -1,0 +1,8 @@
+# 本番設定ファイル（絶対にコミットしない）
+config.local.php
+
+# エディタ・OS
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp

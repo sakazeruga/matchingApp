@@ -1,0 +1,22 @@
+<?php
+// このファイルをコピーして config.local.php にリネームし、値を書き換えてください。
+// config.local.php は .gitignore に含まれており、Git にはコミットされません。
+// さくらサーバーには FileZilla で手動アップロードしてください。
+
+// ── データベース（さくらコントロールパネルで確認） ──────────────────────
+putenv('DB_DSN=mysql:host=mysql????.db.sakura.ne.jp;dbname=????_amagumo;charset=utf8mb4');
+putenv('DB_USER=????');         // さくらのMySQLユーザー名
+putenv('DB_PASS=????');         // さくらのMySQLパスワード
+
+// ── Gemini API ────────────────────────────────────────────────────────────
+putenv('GEMINI_API_KEY=????');  // Google AI Studio で取得
+
+// ── メール ───────────────────────────────────────────────────────────────
+putenv('MAIL_FROM=noreply@yourdomain.com');   // 送信元アドレス
+putenv('MAIL_ADMIN=admin@yourdomain.com');    // 新規申請の通知先
+
+// ── 管理画面ログイン ──────────────────────────────────────────────────────
+putenv('ADMIN_USER=admin');
+// パスワードハッシュ生成方法:
+//   php -r "echo password_hash('YOUR_PASSWORD', PASSWORD_DEFAULT);"
+putenv('ADMIN_PASS_HASH=????');

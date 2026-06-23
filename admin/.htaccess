@@ -1,0 +1,6 @@
+# auth.php は他のページからインクルードされるため直接アクセス禁止
+<FilesMatch "^auth\.php$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes
